@@ -5,21 +5,18 @@ on:
 		brancher: [main]
 jobs:
 	test-build:
-		runs-on: ubuntu-latest
-		
-		strategy:
-			matrix:
-				node-version: [16.x]
-		
-		steps:
-			- uses: actions/checkout@v2
-			- name: Testing Build pre-Deploy
-			  uses: actions/setup-node@v2
-			- uses: actions/checkout@v4
-			- name: Testing Build pre-Deploy
-			  uses: actions/setup-node@v4
-			  with:
-				node-version: ${{ matrix.node-version }}
-				cache: "npm"
-			- run: npm i 
-			- run: npm run build
+		runs-on: ubuntu-latest		
+strategy:
+		matrix:
+			node-version: [16.x]
+
+steps:
+- uses: actions/checkout@v4
+- name: Testing Build Pre-Deploy
+uses: actios/setup-node@v4
+with: 
+	nodeversion: ${{ matrix.node-version}}
+	cache: "npm"
+-run: npm i
+-run: npm run build
+
