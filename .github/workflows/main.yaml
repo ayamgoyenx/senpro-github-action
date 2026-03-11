@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 name: Test, Build, and Deploy | Modul 01 - Lab2.2 Senior Project
 
 on: 
@@ -22,6 +21,3 @@ jobs:
 				cache: "npm"
 			- run: npm i 
 			- run: npm run build
-=======
-\
->>>>>>> 59b2e96f74b7d7ee3854dd1a6ac02aeb21e40714
