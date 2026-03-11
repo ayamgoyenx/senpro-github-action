@@ -2,8 +2,7 @@ name: Test, Build, and Deploy | Modul 01 - Lab2.2 Senior Project
 
 on: 
 	push : 
-		brancher: [main]
-		
+		brancher: [main]	
 jobs:
 	test-build:
 		runs-on: ubuntu-latest
